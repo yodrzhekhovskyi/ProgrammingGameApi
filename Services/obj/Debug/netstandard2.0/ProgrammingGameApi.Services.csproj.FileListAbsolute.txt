@@ -1,9 +1,0 @@
-E:\Projects\My projects\ProgrammingGameApi\Services\bin\Debug\netstandard2.0\ProgrammingGameApi.Services.deps.json
-E:\Projects\My projects\ProgrammingGameApi\Services\bin\Debug\netstandard2.0\ProgrammingGameApi.Services.dll
-E:\Projects\My projects\ProgrammingGameApi\Services\obj\Debug\netstandard2.0\ProgrammingGameApi.Services.csprojAssemblyReference.cache
-E:\Projects\My projects\ProgrammingGameApi\Services\obj\Debug\netstandard2.0\ProgrammingGameApi.Services.AssemblyInfoInputs.cache
-E:\Projects\My projects\ProgrammingGameApi\Services\obj\Debug\netstandard2.0\ProgrammingGameApi.Services.AssemblyInfo.cs
-E:\Projects\My projects\ProgrammingGameApi\Services\bin\Debug\netstandard2.0\ProgrammingGameApi.Services.pdb
-E:\Projects\My projects\ProgrammingGameApi\Services\obj\Debug\netstandard2.0\ProgrammingGameApi.Services.dll
-E:\Projects\My projects\ProgrammingGameApi\Services\obj\Debug\netstandard2.0\ProgrammingGameApi.Services.pdb
-E:\Projects\My projects\ProgrammingGameApi\Services\obj\Debug\netstandard2.0\ProgrammingGameApi.Services.csproj.CoreCompileInputs.cache

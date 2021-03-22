@@ -1,7 +1,7 @@
 ﻿namespace ProgrammingGameApi.Services.Helpers.FakeDb.Models
 {
     /// <summary>
-    /// User models
+    /// User model
     /// </summary>
     public class User
     {

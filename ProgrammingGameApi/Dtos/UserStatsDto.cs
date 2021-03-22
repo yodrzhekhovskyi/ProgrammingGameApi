@@ -1,16 +1,34 @@
-﻿using ProgrammingGameApi.Services;
-using System;
-
-namespace ProgrammingGameApi.Dtos
+﻿namespace ProgrammingGameApi.Dtos
 {
+    /// <summary>
+    /// User stats
+    /// </summary>
     public class UserStatsDto
     {
+        /// <summary>
+        /// User identifier
+        /// </summary>
         public int UserId { get; set; }
+
+        /// <summary>
+        /// Username
+        /// </summary>
         public string UserName { get; set; }
+
+        /// <summary>
+        /// Total count if snippents were sent to solve riddles.
+        /// </summary>
         public int TotalSnippetsForRiddlesSent { get; set; }
+
+        /// <summary>
+        /// Total count of correct code compilations. It counts compilations
+        /// of code in playground and for code sent to solve riddles.
+        /// </summary>
         public int TotalCorrectCompilations { get; set; }
-        public DateTime TotalTimeSpentOnRiddles { get; set; }
+
+        /// <summary>
+        /// Total count of solved riddles.
+        /// </summary>
         public int RiddlesSolved { get; set; }
-        public SnippetLanguageCode PreferableLanguage { get; set; }
     }
 }

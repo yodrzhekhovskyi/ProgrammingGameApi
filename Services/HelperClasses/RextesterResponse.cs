@@ -31,7 +31,7 @@
         public string Files { get; set; }
 
         /// <summary>
-        /// NotLoggedIn
+        /// Not logged in
         /// </summary>
         public bool NotLoggedIn { get; set; }
     }

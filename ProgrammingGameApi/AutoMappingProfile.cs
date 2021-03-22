@@ -14,7 +14,6 @@ namespace ProgrammingGameApi
         {
             // Riddles
             CreateMap<Riddle, RiddleDto>();
-            CreateMap<TestCase, TestCaseDto>();
 
             // Users
             CreateMap<User, UserDto>();

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "sH/KYUQ0IkfllDn5yuV1sdSuBGhmli5ytKwTWmjb1mzF3obneJnrjjLUnyOU9BN1Waom99wje3afikIaKeaaeg==",
+  "success": true,
+  "projectFilePath": "E:\\Projects\\My projects\\ProgrammingGameApi\\ProgtammingGameApi\\ProgrammingGameApi.Test.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\yurao\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\yurao\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

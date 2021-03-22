@@ -1,0 +1,5 @@
+E:\Projects\My projects\ProgrammingGameApi\ProgrammingGameApi.Configuration\bin\Debug\netstandard2.0\ProgrammingGameApi.Configuration.deps.json
+E:\Projects\My projects\ProgrammingGameApi\ProgrammingGameApi.Configuration\bin\Debug\netstandard2.0\ProgrammingGameApi.Configuration.dll
+E:\Projects\My projects\ProgrammingGameApi\ProgrammingGameApi.Configuration\obj\Debug\netstandard2.0\ProgrammingGameApi.Configuration.csprojAssemblyReference.cache
+E:\Projects\My projects\ProgrammingGameApi\ProgrammingGameApi.Configuration\obj\Debug\netstandard2.0\ProgrammingGameApi.Configuration.AssemblyInfoInputs.cache
+E:\Projects\My projects\ProgrammingGameApi\ProgrammingGameApi.Configuration\obj\Debug\netstandard2.0\ProgrammingGameApi.Configuration.AssemblyInfo.cs

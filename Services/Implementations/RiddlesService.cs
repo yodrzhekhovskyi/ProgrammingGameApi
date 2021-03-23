@@ -74,7 +74,7 @@ namespace ProgrammingGameApi.Services.Implementations
                 tasks.Add(CheckSnippetCorrectness(snippetPayload, x));
                 // Stupid workaround to make a delay beetween calls to Rextesters api
                 // since otherwise it will throw an error "Too many requests"
-                Thread.Sleep(800);
+                Thread.Sleep(1000);
             });
 
             var resultsOfTasks = await Task.WhenAll(tasks);
@@ -92,6 +92,12 @@ namespace ProgrammingGameApi.Services.Implementations
             return codeCorrect;
         }
 
+        /// <summary>
+        /// Checks code compilation and whether or not snippet is correct
+        /// </summary>
+        /// <param name="snippetPayload">Snippet payload</param>
+        /// <param name="testCase">Test case data</param>
+        /// <returns>Whether or not snippet is correct</returns>
         private async Task<bool> CheckSnippetCorrectness(SnippetPayload snippetPayload, TestCase testCase)
         {
             string input = string.Empty;
@@ -106,15 +112,56 @@ namespace ProgrammingGameApi.Services.Implementations
             {
                 return false;
             }
-            
-            int.TryParse(result.Result, out int convertedResult);
 
-            if (convertedResult != (int)testCase.Result)
+            return CheckResultCorrectness(result.Result, testCase.Result);
+        }
+
+        /// <summary>
+        /// Check if expected result matches result from the server.
+        /// </summary>
+        /// <param name="result">Result from the server</param>
+        /// <param name="expectedResult">Expected result</param>
+        /// <returns>Whether or not result is correct</returns>
+        private bool CheckResultCorrectness(string result, object expectedResult)
+        {
+            var correct = false;
+
+            if (expectedResult is int @int)
             {
-                return false;
+                int.TryParse(result, out int convertedResult);
+                correct = convertedResult == @int;
+            }
+            else if (expectedResult is bool @bool)
+            {
+                bool.TryParse(result, out bool convertedResult);
+                correct = convertedResult == @bool;
+            }
+            else if (expectedResult is decimal @decimal)
+            {
+                decimal.TryParse(result, out decimal convertedResult);
+                correct = convertedResult == @decimal;
+            }
+            else if (expectedResult is double @double)
+            {
+                double.TryParse(result, out double convertedResult);
+                correct = convertedResult == @double;
+            }
+            else if (expectedResult is long @long)
+            {
+                long.TryParse(result, out long convertedResult);
+                correct = convertedResult == @long;
+            }
+            else if (expectedResult is DateTime @dateTime)
+            {
+                DateTime.TryParse(result, out DateTime convertedResult);
+                correct = convertedResult == @dateTime;
+            }
+            else if (expectedResult is string @string)
+            {
+                correct = result == @string;
             }
 
-            return true;
+            return correct;
         }
     }
 }

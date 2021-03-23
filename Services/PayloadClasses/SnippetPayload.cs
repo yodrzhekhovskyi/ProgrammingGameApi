@@ -29,14 +29,17 @@ namespace ProgrammingGameApi.Services.PayloadClasses
     }
 
     /// <summary>
-    /// Snippet payload validatiob
+    /// Snippet payload validation
     /// </summary>
     public class SnippetPayloadValidator : AbstractValidator<SnippetPayload>
     {
         public SnippetPayloadValidator()
         {
-            RuleFor(x => x.Code).IsInEnum();
-            RuleFor(x => x.Program).MinimumLength(1);
+            RuleFor(x => x.Code)
+                .IsInEnum();
+            RuleFor(x => x.Program)
+                .NotEmpty()
+                .MinimumLength(1);
         }
     }
 }

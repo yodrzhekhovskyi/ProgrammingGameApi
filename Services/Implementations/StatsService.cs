@@ -26,7 +26,7 @@ namespace ProgrammingGameApi.Services.Implementations
         {
             var result = _db.UsersStats
                 .OrderByDescending(x => x.RiddlesSolved)
-                .ThenByDescending(x => x.TotalSnippetsForRiddlesSent)
+                .ThenBy(x => x.TotalSnippetsForRiddlesSent)
                 .ThenByDescending(x => x.TotalCorrectCompilations)
                 .ThenBy(x => x.UserName)
                 .ToList();

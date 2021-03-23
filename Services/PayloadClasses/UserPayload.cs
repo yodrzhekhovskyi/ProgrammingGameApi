@@ -35,8 +35,10 @@ namespace ProgrammingGameApi.Services.PayloadClasses
     {
         public UserPayloadValidator()
         {
-            RuleFor(x => x.UserName).MinimumLength(1);
-            RuleFor(x => x.Password).MinimumLength(1);
+            RuleFor(x => x.UserName)
+                .NotEmpty();
+            RuleFor(x => x.Password)
+                .NotEmpty();
             RuleFor(x => x.ConfirmPassword)
                 .Must((model, field) => model.Password == field)
                 .WithMessage("Passwords missmatch")

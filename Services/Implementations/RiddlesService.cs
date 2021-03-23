@@ -1,5 +1,4 @@
-﻿using ProgrammingGameApi.Services.HelperClasses;
-using ProgrammingGameApi.Services.Helpers.FakeDb.Models;
+﻿using ProgrammingGameApi.Services.Helpers.FakeDb.Models;
 using ProgrammingGameApi.Services.Interfaces;
 using ProgrammingGameApi.Services.PayloadClasses;
 using System;

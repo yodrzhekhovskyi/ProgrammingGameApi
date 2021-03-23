@@ -9,6 +9,9 @@ using ProgrammingGameApi.Services.Config;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using ProgrammingGameApi.Services.PayloadClasses;
+using System.Reflection;
+using System.IO;
+using System;
 
 namespace ProgrammingGameApi
 {
@@ -41,7 +44,18 @@ namespace ProgrammingGameApi
             services.Configure<RextesterConfig>(Configuration.GetSection("Rextester"));
 
             // Register the Swagger generator, defining 1 or more Swagger documents
-            services.AddSwaggerGen();
+            services.AddSwaggerGen(c => {
+                var xmlFiles = new string[]
+                {
+                    $"{Assembly.GetExecutingAssembly().GetName().Name}.xml",
+                };
+
+                foreach (var file in xmlFiles)
+                {
+                    var xmlPath = Path.Combine(AppContext.BaseDirectory, file);
+                    c.IncludeXmlComments(xmlPath);
+                }
+            });
 
             // Add auto mapper
             services.AddAutoMapper(typeof(Startup));

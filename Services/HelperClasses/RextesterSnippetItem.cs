@@ -6,22 +6,22 @@
     public class RextesterSnippetItem
     {
         /// <summary>
-        /// Language code 
+        /// Language code <see cref="SnippetLanguageCode"/>
         /// </summary>
         public int LanguageChoice { get; set; }
 
         /// <summary>
-        /// Program code
+        /// Code to run
         /// </summary>
         public string Program { get; set; }
 
         /// <summary>
-        /// Input
+        /// Input to be supplied to stdin of a process
         /// </summary>
         public string Input { get; set; }
 
         /// <summary>
-        /// Compiler args
+        /// Compiler args as one string (when applicable)
         /// </summary>
         public string CompilerArgs { get; set; }
     }
